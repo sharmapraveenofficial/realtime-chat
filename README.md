@@ -88,11 +88,20 @@ npm run dev
 3. Set up facial recognition (optional)
 4. Verify your email
 
+<!-- Option 1: Use a GIF instead (recommended) -->
+![Chat Demo](./screenshots/chat-demo.gif)
+
+<!-- Option 2: Image thumbnail that links to the video file -->
 <div align="center">
-  <video src="app/screenshots/chat-demo.mp4" width="600" controls></video>
+  <a href="./screenshots/chat-demo.mp4">
+    <img src="./screenshots/chat-thumbnail.png" alt="Click to watch demo video" width="600">
+    <br>
+    Click to watch demo video
+  </a>
 </div>
 
-[Watch Sign Up Demo Video](app/screenshots/chat-demo.mp4)
+<!-- Option 3: Link to the video -->
+[Watch Chat Demo Video](./screenshots/chat-demo.mp4)
 
 ### Creating a Chat Room
 1. Click on the "+" button in the sidebar
