@@ -128,7 +128,7 @@ const RoomSettings = ({ room, currentUser, onClose, onUpdate, roomId, setRoomDet
         updatedRoom.pendingInvites = [];
       }
 
-      updatedRoom.pendingInvites.push({ id: data.user.id, email: data.user.username });
+      updatedRoom.pendingInvites.push({ id: data.invite.id || data.user.id, email: data.invite.email || data.user.email });
 
       // Update invites count and list if we're on the invites tab
       setRoomDetails(updatedRoom);

@@ -1,37 +1,164 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Realtime Chat Application
 
-## Getting Started
+A modern, secure, and feature-rich real-time chat application built with Next.js, MongoDB, and WebSockets.
 
-First, run the development server:
+![Application Overview](URL-to-image)
 
+## Features
+
+### User Authentication
+- Email and password-based registration and login
+- Facial recognition for enhanced security
+- JWT-based authentication system with refresh tokens
+- Password hashing and secure storage
+
+![Authentication Demo](URL-to-image)
+
+### Real-time Messaging
+- Instant message delivery
+- Read receipts
+- Typing indicators
+- Message history
+- Emoji support
+
+![Chat Interface](URL-to-image)
+
+### Chat Rooms
+- Create public or private chat rooms
+- Customize room settings
+- View active participants
+- Member management
+
+![Room Management](URL-to-image)
+
+### Invitation System
+- Invite users by email
+- Accept/reject invitations
+- Email notifications for new invitations
+- Pending invitation management
+
+![Invitation Flow](URL-to-image)
+
+### UI/UX
+- Modern, responsive design
+- Dark mode interface
+- Intuitive navigation
+- Real-time updates
+
+## Technology Stack
+- **Frontend**: Next.js, React, TailwindCSS
+- **Backend**: Node.js, Express
+- **Database**: MongoDB
+- **Real-time Communication**: WebSockets
+- **Authentication**: JWT, bcrypt
+- **Face Recognition**: TensorFlow.js
+- **Email**: Nodemailer
+
+## Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Create a `.env` file in the root directory and add your environment variables:
+```bash
+NEXT_PUBLIC_API_URL=<your-api-url>
+MONGODB_URI=<your-mongodb-uri>
+JWT_SECRET=<your-jwt-secret>
+EMAIL_USER=<your-email>
+EMAIL_PASS=<your-email-password>
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Start the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+### Sign Up
+1. Navigate to the signup page
+2. Enter your email, username, and password
+3. Set up facial recognition (optional)
+4. Verify your email
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<div align="center">
+  <video src="app/screenshots/chat-app.mp4" width="600" controls></video>
+</div>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[Watch Sign Up Demo Video](app/screenshots/chat-app.mp4)
 
-## Deploy on Vercel
+### Creating a Chat Room
+1. Click on the "+" button in the sidebar
+2. Enter a name for your new chat room
+3. Invite participants via email or username
+4. Click "Create Room"
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Create Room]
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# realtime-chat
+### Inviting Users
+1. Open the room settings by clicking the gear icon
+2. Navigate to the "Invites" tab
+3. Enter the email address of the person you want to invite
+4. Click "Send Invite"
+
+![Send Invite]
+
+### Sending Messages
+1. Select a chat room from the sidebar
+2. Type your message in the input field
+3. Use the emoji picker to add emojis
+4. Press "Send" or hit Enter
+
+![Messaging]
+
+## API Documentation
+
+### Authentication Endpoints
+- `POST /api/auth/register` - Register a new user
+- `POST /api/auth/login` - Login with username/password
+- `POST /api/auth/refresh` - Refresh access token
+- `POST /api/auth/logout` - Logout user
+
+### Chat Room Endpoints
+- `GET /api/chatrooms` - Get all rooms for the current user
+- `POST /api/chatrooms` - Create a new chat room
+- `GET /api/chatrooms/:id` - Get details of a specific room
+- `PUT /api/chatrooms/:id` - Update a chat room
+- `DELETE /api/chatrooms/:id` - Delete a chat room
+
+### Invitation Endpoints
+- `POST /api/invitations` - Create and send a new invitation
+- `GET /api/invitations/verify/:token` - Verify an invitation token
+- `POST /api/invitations/accept` - Accept an invitation
+
+### Messages Endpoints
+- `GET /api/chatrooms/:id/messages` - Get all messages for a room
+- `POST /api/chatrooms/:id/messages` - Send a new message
+
+## Security Features
+- **Password Hashing**: All passwords are hashed using bcrypt
+- **JWT Authentication**: Secure JSON Web Tokens with expiration
+- **Face Recognition**: Optional biometric authentication
+- **HTTPS**: Recommended for production deployment
+- **XSS Protection**: Input sanitization and output encoding
+- **Rate Limiting**: Protection against brute force attacks
+
+## Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
