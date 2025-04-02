@@ -89,19 +89,19 @@ npm run dev
 4. Verify your email
 
 <!-- Option 1: Use a GIF instead (recommended) -->
-![Chat Demo](./screenshots/chat-demo.gif)
+![Chat Demo](https://raw.githubusercontent.com/sharmapraveenofficial/realtime-chat/main/app/screenshots/chat-demo.gif)
 
 <!-- Option 2: Image thumbnail that links to the video file -->
 <div align="center">
-  <a href="app/screenshots/chat-demo.gif">
-    <img src="app/screenshots/chat-demo.gif" alt="Click to watch demo video" width="600">
+  <a href="https://github.com/sharmapraveenofficial/realtime-chat/blob/main/app/screenshots/chat-demo.gif">
+    <img src="https://github.com/sharmapraveenofficial/realtime-chat/blob/main/app/screenshots/chat-demo.gif" alt="Click to watch demo video" width="600">
     <br>
     Click to watch demo video
   </a>
 </div>
 
 <!-- Option 3: Link to the video -->
-[Watch Chat Demo Video](app/screenshots/chat-demo.gif)
+[Watch Chat Demo Video](https://github.com/sharmapraveenofficial/realtime-chat/blob/main/app/screenshots/chat-demo.mp4)
 
 ### Creating a Chat Room
 1. Click on the "+" button in the sidebar
