@@ -2,8 +2,6 @@
 
 A modern, secure, and feature-rich real-time chat application built with Next.js, MongoDB, and WebSockets.
 
-![Application Overview]
-
 ## Features
 
 ### User Authentication
@@ -12,7 +10,6 @@ A modern, secure, and feature-rich real-time chat application built with Next.js
 - JWT-based authentication system with refresh tokens
 - Password hashing and secure storage
 
-![Authentication Demo]
 
 ### Real-time Messaging
 - Instant message delivery
@@ -20,8 +17,6 @@ A modern, secure, and feature-rich real-time chat application built with Next.js
 - Typing indicators
 - Message history
 - Emoji support
-
-![Chat Interface]
 
 ### Chat Rooms
 - Create public or private chat rooms
@@ -36,8 +31,6 @@ A modern, secure, and feature-rich real-time chat application built with Next.js
 - Accept/reject invitations
 - Email notifications for new invitations
 - Pending invitation management
-
-![Invitation Flow]
 
 ### UI/UX
 - Modern, responsive design
@@ -109,15 +102,12 @@ npm run dev
 3. Invite participants via email or username
 4. Click "Create Room"
 
-![Create Room]
-
 ### Inviting Users
 1. Open the room settings by clicking the gear icon
 2. Navigate to the "Invites" tab
 3. Enter the email address of the person you want to invite
 4. Click "Send Invite"
 
-![Send Invite]
 
 ### Sending Messages
 1. Select a chat room from the sidebar
@@ -125,7 +115,6 @@ npm run dev
 3. Use the emoji picker to add emojis
 4. Press "Send" or hit Enter
 
-![Messaging]
 
 ## API Documentation
 
