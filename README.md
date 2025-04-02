@@ -2,7 +2,7 @@
 
 A modern, secure, and feature-rich real-time chat application built with Next.js, MongoDB, and WebSockets.
 
-![Application Overview](URL-to-image)
+![Application Overview]
 
 ## Features
 
@@ -12,7 +12,7 @@ A modern, secure, and feature-rich real-time chat application built with Next.js
 - JWT-based authentication system with refresh tokens
 - Password hashing and secure storage
 
-![Authentication Demo](URL-to-image)
+![Authentication Demo]
 
 ### Real-time Messaging
 - Instant message delivery
@@ -21,7 +21,7 @@ A modern, secure, and feature-rich real-time chat application built with Next.js
 - Message history
 - Emoji support
 
-![Chat Interface](URL-to-image)
+![Chat Interface]
 
 ### Chat Rooms
 - Create public or private chat rooms
@@ -29,7 +29,7 @@ A modern, secure, and feature-rich real-time chat application built with Next.js
 - View active participants
 - Member management
 
-![Room Management](URL-to-image)
+![Room Management]
 
 ### Invitation System
 - Invite users by email
@@ -37,7 +37,7 @@ A modern, secure, and feature-rich real-time chat application built with Next.js
 - Email notifications for new invitations
 - Pending invitation management
 
-![Invitation Flow](URL-to-image)
+![Invitation Flow]
 
 ### UI/UX
 - Modern, responsive design
@@ -89,7 +89,7 @@ npm run dev
 4. Verify your email
 
 <div align="center">
-  <video src="app/screenshots/chat-app.mp4" width="600" controls></video>
+  <video src="app/screenshots/chat-demo.mp4" width="600" controls></video>
 </div>
 
 [Watch Sign Up Demo Video](app/screenshots/chat-app.mp4)
