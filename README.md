@@ -92,7 +92,7 @@ npm run dev
   <video src="app/screenshots/chat-demo.mp4" width="600" controls></video>
 </div>
 
-[Watch Sign Up Demo Video](app/screenshots/chat-app.mp4)
+[Watch Sign Up Demo Video](app/screenshots/chat-demo.mp4)
 
 ### Creating a Chat Room
 1. Click on the "+" button in the sidebar
