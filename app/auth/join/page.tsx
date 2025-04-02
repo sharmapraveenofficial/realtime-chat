@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 
@@ -12,7 +12,7 @@ interface Invitation {
   userExists: boolean;
 }
 
-export default function JoinPage() {
+function JoinPageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const token = searchParams.get('token');
@@ -223,5 +223,18 @@ export default function JoinPage() {
         )}
       </div>
     </div>
+  );
+}
+
+// Wrapper component that adds Suspense
+export default function JoinPage() {
+  return (
+    <Suspense fallback={
+      <div className="flex justify-center items-center min-h-screen">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"></div>
+      </div>
+    }>
+      <JoinPageContent />
+    </Suspense>
   );
 } 

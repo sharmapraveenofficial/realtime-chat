@@ -6,7 +6,7 @@ import { getUserFromToken } from '@/lib/auth';
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     await connectToMongoDB();
@@ -16,7 +16,7 @@ export async function GET(
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
     
-    const chatRoomId = params.id;
+    const { id: chatRoomId } = await Promise.resolve(params);
     
     // Check if user is a participant in the chat room and get room details
     const chatRoom = await ChatRoom.findOne({

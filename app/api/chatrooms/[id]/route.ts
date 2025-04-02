@@ -15,7 +15,7 @@ interface Participant {
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     await connectToMongoDB();
@@ -25,7 +25,8 @@ export async function GET(
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
     
-    const chatRoomId = params.id;
+    const resolvedParams = await params;
+    const { id: chatRoomId } = resolvedParams;
     
     // Find the chat room and ensure user is a participant
     const chatRoom = await ChatRoom.findOne({
@@ -47,7 +48,7 @@ export async function GET(
 
 export async function PUT(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     await connectToMongoDB();
@@ -57,7 +58,9 @@ export async function PUT(
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
     
-    const chatRoomId = params.id;
+    const resolvedParams = await params;
+    const { id: chatRoomId } = resolvedParams;
+
     const chatRoom = await ChatRoom.findById(chatRoomId).populate('participants', 'username');
     
     if (!chatRoom) {

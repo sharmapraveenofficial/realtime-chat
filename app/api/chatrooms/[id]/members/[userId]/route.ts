@@ -5,7 +5,7 @@ import { getUserFromToken } from '@/lib/auth';
 
 export async function DELETE(
   req: NextRequest,
-  { params }: { params: { id: string; userId: string } }
+  { params }: { params: Promise<{ id: string; userId: string }> }
 ) {
   try {
     await connectToMongoDB();
@@ -15,8 +15,8 @@ export async function DELETE(
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
     
-    const chatRoomId = params.id;
-    const memberIdToRemove = params.userId;
+    const resolvedParams = await params;
+    const { id: chatRoomId, userId: memberIdToRemove } = resolvedParams;
     
     const chatRoom = await ChatRoom.findById(chatRoomId);
     
